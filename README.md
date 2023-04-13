@@ -15,4 +15,4 @@ The main aim of this project is to prevent the loss of crops and protect the are
  * It checks if motion is detected using a PIR sensor, captures images if motion is detected, and classifies objects in the captured images.
  * If an object of interest is detected, it sends a notification and turns on a buzzer and an LED for 5 seconds.
  
- ===============================================================================================================================================================
+ =============================================================================================================================================
