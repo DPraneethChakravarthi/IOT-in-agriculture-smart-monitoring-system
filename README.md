@@ -14,6 +14,6 @@ The main aim of this project is to prevent the loss of crops and protect the are
  # It defines a function to detect motion and classify objects in the captured images. It loads a pre-trained machine learning model using the MobileNet SSD framework, 
    loops over frames from the video stream, and uses the model to detect objects in the frames.
  # It checks if motion is detected using a PIR sensor, captures images if motion is detected, and classifies objects in the captured images.
- # If an object of interest is detected, it sends a WhatsApp message and turns on a buzzer and an LED for 5 seconds.
+ # If an object of interest is detected, it sends a notification and turns on a buzzer and an LED for 5 seconds.
  
- ============================================================================================================================================================================================================================
+ ===============================================================================================================================================================
