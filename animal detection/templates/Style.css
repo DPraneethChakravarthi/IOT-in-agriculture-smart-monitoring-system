@@ -1,0 +1,31 @@
+*
+{
+  background-image: url("darpan-sharma-VSPML6XFzjs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position:100%;
+}
+button {
+  background-color: #4CAF50;      
+  color: white;
+  padding: 15px 32px 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 150px;
+}
+#Name {
+  text-decoration: underline;
+  text-decoration-style:double;
+  color: crimson;
+  font-weight: 400px
+}
+#Buzzer {
+  text-decoration: underline;
+  text-decoration-style:double;
+  color: crimson;
+  font-weight: 400px
+}

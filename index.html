@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <title>Animal Intrusion </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+.button {
+
+  background-color: #4CAF50;
+
+  border: none;
+
+  color: white;
+
+  padding: 15px 32px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 4px 2px;
+
+  cursor: pointer;
+corner-radius: 2px;
+width: 150px;
+
+}
+
+</style>
+  </head>
+  <body>
+<center>
+<h1 style = "font-colour = #0000ff;font-size = 65px;font-weight:bolder;padding:20px;border-style: solid;">Pi Based Animal Detection Bot</h1></center>
+<br>
+<div class="row">
+<div class="col-sm-6">
+<center>
+    
+    <img src="{{ url_for('video_feed') }}" style = "width:640;height:480">
+	
+</div>
+<div class="col-sm-6">
+<br><br>
+<center>
+<form action = "/" method="post" id="capturing">
+        
+
+       <button class = "button" id = "capture" type="submit" name="capture" value="capture"> capture Video </button>
+
+    </form>
+
+
+	
+
+  <script type="text/javascript">
+
+    $(document).on('submit','#capturing',function(e)
+
+                   {
+
+      console.log('hello');
+
+      e.preventDefault();
+
+      $.ajax({
+
+        type:'POST',
+
+        url:'/',
+
+        data:{
+
+          capture:$("#capture").val()
+	  
+
+        },
+
+        
+
+      })
+
+    });
+
+  </script>
+<br><br>
+<div class="row">
+
+    <div class="col-sm-4 text-right" >
+	<form action = "/" method="post" id="turn-on-buzzer">
+        
+
+       <button class = "button" id = "buzzeron" type="submit" name="buzzeron" value="buzzeron"> Buzzer ON</button>
+
+    </form>
+	</div>
+<div class="col-sm-4 " ><form action = "/" method="post" id="stop-motion">
+        
+
+       <button class = "button" id = "stop" type="submit" name="stop" value="stop"> Stop Capturing </button>
+
+    </form></div>
+	
+
+    <div class="col-sm-4 text-left" ><form action = "/" method="post" id="turn-off-buzzer">
+        
+
+       <button class = "button" id = "buzzeroff" type="submit" name="right" value="buzzeroff"> Buzzer OFF </button>
+
+    </form></div>
+
+    
+
+  </div>
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+<form action = "/" method="post" id="backward-motion">
+        
+
+       <button class = "button" id = "backward" type="submit" name="backward" value="backward"> DETECT ANIMAL </button>
+
+    </form>
+
+
+	
+  <script type="text/javascript">
+    $(document).on('submit','#backward-motion',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/',
+        data:{
+          backward:$("#backward").val()
+	  
+        },
+        
+      })
+    });
+  </script>
+<script type="text/javascript">
+    $(document).on('submit','#turn-on-buzzer',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/',
+        data:{
+          buzzeron:$("#buzzeron").val()
+	  
+        },
+        
+      })
+    });
+  </script>
+<script type="text/javascript">
+    $(document).on('submit','#turn-off-buzzer',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/',
+        data:{
+          buzzeroff:$("#buzzeroff").val()
+	  
+        },
+        
+      })
+    });
+  </script>
+<script type="text/javascript">
+    $(document).on('submit','#stop-motion',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/',
+        data:{
+          stop:$("#stop").val()
+	  
+        },
+        
+      })
+    });
+  </script>
+</center>
+</div>
+<h1 style="text-decoration: underline;text-decoration-style:double; color: crimson; font-weight: 400px;">{{name}}</h1>
+  </body>
+</html>
